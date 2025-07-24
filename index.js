@@ -18,6 +18,9 @@ let flag = true;
 //  5 : GREEN
 //  6 : BLUE
 //  7 : WHITE
+//
+//  URL of video (dmx lightin control with the script shown below.
+//  https://nttcom.app.box.com/s/ui9dmitp0t0nb5xs4pe6jrklu75la9ze
 
 setInterval(() => {
   if(flag){
