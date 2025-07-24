@@ -1,0 +1,15 @@
+{
+  "name": "dmx-control-example",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["dmx"],
+  "author": "Kensaku KOMATSU - kensaku.komatsu@gmail.com",
+  "license": "MIT",
+  "description": "example repository to control dmx with node.js",
+  "dependencies": {
+    "dmx": "^0.2.5"
+  }
+}
