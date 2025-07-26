@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMX Control Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DMX Control Example</h1>
+    </header>
+    <main>
+        <section id="controls">
+            <video id="dmx-video" width="640" controls>
+                <source src="assets/dmx-example0724.mp4" type="video/mp4">
+                <track src="vmt/dmx-left-sample.vmt" kind="metadata" for="left">
+                <track src="vmt/dmx-right-sample.vmt" kind="metadata" for="right">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section id="lighting">
+            <div id="left"></div>
+            <div id="right"></div>
+        </section>
+        <section>
+            <div id="vmt-log">
+                vmt log
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
