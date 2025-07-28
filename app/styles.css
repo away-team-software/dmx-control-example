@@ -1,0 +1,29 @@
+#lighting {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    width: 640px;
+    height: 320px;
+}
+
+
+#lighting #left {
+    border: 1px solid #ccc;
+    border-radius: 320px;
+    margin-top: 80px;
+    width: 320px;
+    height: 160px;
+}
+
+#lighting #right {
+    border: 1px solid #ccc;
+    border-radius: 320px;
+    margin-top: 80px;
+    width: 320px;
+    height: 160px;
+}
+
+#lighting .on {
+    background-color: #ff0;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+}

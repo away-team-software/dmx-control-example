@@ -6,7 +6,9 @@ In this example, two dmx lighting devices are controled.
 
 * index.js
     - sample Node.js script to control dmx lighting devices.
-* /assets
+* /app/assets
     - video files
-* /samples
+* /app/vmt
     - sample vmt files
+* /app
+    - sample app directory (e.g. run `npx http-server`, then open `http://localhost:8080` )
