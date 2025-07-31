@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebVTT Survery</title>
+</head>
+<body>
+    <header>
+        <h1>WebVTT survey</h1>
+    </header>
+    <main>
+        <section id="controls">
+            <video id="video" width="720" controls>
+                <source src="../assets/dmx-example0724.mp4" type="video/mp4">
+                <track src="test.vtt" default>
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section>
+            <div id="track-text"></div>
+        </section>
+        <section>
+            <button id="add-cue">Add Cue</button>
+        </section>
+    </main>
+    <script>
+        const video = document.getElementById('video');
+        const track = video.querySelector('track');
+        const addCueButton = document.getElementById('add-cue');
+
+        const trackText = document.getElementById('track-text');
+
+        let cue;
+        track.addEventListener('cuechange', e => {
+            const activeCues = e.target?.track?.activeCues;
+            console.log('cuechange', activeCues);
+            if (activeCues && activeCues.length > 0) {
+                cue = activeCues[0];
+                if( cue.data) {
+                    trackText.textContent = `pan: ${cue.data.pan}, tilt: ${cue.data.tilt}, dimmer: ${cue.data.dimmer}, color: ${cue.data.color}`;
+                } else {
+                    trackText.textContent = `no-data, text:${cue.text}`;
+                }
+                //cue.onexit = () => {
+                //    trackText.textContent = '';
+                //};
+            } else {
+                trackText.textContent = '';
+            }
+        });
+
+        class DataCue extends VTTCue {
+            data;
+
+            constructor(startTime, endTime, text) {
+                super(startTime, endTime, text);
+                this.data = { pan: 0, tilt: 0, dimmer: 0, color: 'rgb(0, 0, 0)' };
+            }
+        }
+
+
+        addCueButton.addEventListener('click', () => {
+            if (track) {
+                //const event = new Event('cuechange');
+                //track.dispatchEvent(event);
+                //const cue = new VTTCue(15, 18, 'Test Cue');
+                const dataCue = new DataCue(15, 18.5, 'Test Data Cue');
+                track.track.addCue(dataCue);
+            } else {
+                console.warn('No active cue to dispatch');
+            }
+        });
+    </script>
+</body>
+</html>
