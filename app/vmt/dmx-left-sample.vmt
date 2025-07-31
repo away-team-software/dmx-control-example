@@ -13,20 +13,50 @@ pan:0 tilt:0 dimmer:0
 color: "rgb(0, 0, 0)"
 
 00:00:07.000 --> 00:00:09.500
-{ "pan": 32, "tilt": 160, "dimmer": 255, "color": "rgb( 0, 0, 255 )" }
+{
+    "sync":
+    { "type": "org.webvmt.lighting-example", "id": "light1", "data": 
+        { "pan": 32, "tilt": 160, "dimmer": 255, "color": "rgb( 0, 0, 255 )" }
+    }
+}
 
 00:00:09.500 --> 00:00:12.000
-{ "pan": 160, "tilt": 96, "dimmer": 255, "color": "rgb( 255, 255, 0 )" }
+{
+    "sync":
+    { "type": "org.webvmt.lighting-example", "id": "light1", "data": 
+        { "pan": 160, "tilt": 96, "dimmer": 255, "color": "rgb( 255, 255, 0 )" }
+    }
+}
 
 00:00:12.000 --> 00:00:14.500
-{ "pan": 32, "tilt": 160, "dimmer": 255, "color": "rgb( 0, 0, 255 )" }
+{
+    "sync":
+    { "type": "org.webvmt.lighting-example", "id": "light1", "data": 
+        { "pan": 32, "tilt": 160, "dimmer": 255, "color": "rgb( 0, 0, 255 )" }
+    }
+}
 
 00:00:14.500 --> 00:00:17.000
-{ "pan": 160, "tilt": 96, "dimmer": 255, "color": "rgb( 255, 255, 0 )" }
+{
+    "sync":
+    { "type": "org.webvmt.lighting-example", "id": "light1", "data": 
+        { "pan": 160, "tilt": 96, "dimmer": 255, "color": "rgb( 255, 255, 0 )" }
+    }
+}
 
 00:00:17.000 --> 00:00:19.500
-{ "pan": 32, "tilt": 160, "dimmer": 255, "color": "rgb( 0, 0, 255 )" }
+{
+    "sync":
+    { "type": "org.webvmt.lighting-example", "id": "light1", "data": 
+        { "pan": 32, "tilt": 160, "dimmer": 255, "color": "rgb( 0, 0, 255 )" }
+    }
+}
 
 00:00:19.500 --> 00:00:22.000
-{ "pan": 160, "tilt": 96, "dimmer": 255, "color": "rgb( 255, 255, 0 )" }
+{
+    "sync":
+    { "type": "org.webvmt.lighting-example", "id": "light1", "data": 
+        { "pan": 160, "tilt": 96, "dimmer": 255, "color": "rgb( 255, 255, 0 )" }
+    }
+}
 
