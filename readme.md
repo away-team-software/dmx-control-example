@@ -15,6 +15,6 @@ In this example, two dmx lighting devices are controled.
 
 # sample site
 
-CSS effect which syncronized with video ( two dmx lighting device ).
+CSS effect which syncronized with video, two dmx lighting device, leveraging DataCue.
 
 * https://dmx-control-example.netlify.app/

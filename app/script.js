@@ -61,7 +61,7 @@ function init() {
                 if( activeCues && activeCues.length > 0 ) {
                     const currentCue = activeCues[0]; // obtain DataCue
 
-                    if( currentCue.type === 'org.webvmt.lighting-example' ) {
+                    if( currentCue.type === 'org.webvmt.example.lighting' ) {
                         drawLight({ lightId: forValue, ...currentCue.value, text: JSON.stringify(currentCue.value, null, 2) });
                     }
                 } else {
