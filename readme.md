@@ -12,3 +12,9 @@ In this example, two dmx lighting devices are controled.
     - sample vmt files
 * /app
     - sample app directory (e.g. run `npx http-server`, then open `http://localhost:8080` )
+
+# sample site
+
+CSS effect which syncronized with video, two dmx lighting device, leveraging DataCue.
+
+* https://dmx-control-example.netlify.app/

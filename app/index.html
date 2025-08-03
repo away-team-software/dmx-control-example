@@ -8,11 +8,9 @@
     <script src="vmt-polyfill.js"></script>
 </head>
 <body>
-    <header>
-        <h1>DMX Control Example</h1>
-    </header>
     <main>
-        <section id="controls">
+        <section id="video-section">
+            <h1>DMX Control Example</h1>
             <video id="dmx-video" width="640" controls>
                 <source src="assets/dmx-example0724.mp4" type="video/mp4">
                 <track src="vmt/dmx-left-sample.vmt" kind="metadata" for="left" default>
@@ -20,14 +18,18 @@
                 Your browser does not support the video tag.
             </video>
         </section>
-        <section id="lighting">
+        <section id="lighting-section">
             <div class="wrapper" id="left">
                 <div class="light"></div>
-                <div class="text"><pre></pre></div>
+                <div class="text">
+                    <pre></pre>
+                </div>
             </div>
             <div class="wrapper" id="right">
                 <div class="light"></div>
-                <div class="text"><pre></pre></div>
+                <div class="text">
+                    <pre></pre>
+                </div>
             </div>
         </section>
     </main>
