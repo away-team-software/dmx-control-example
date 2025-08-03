@@ -17,7 +17,21 @@ const drawLight = ( { lightId, pan, tilt, dimmer, color, text } ) => {
         lightElement.style.transition = 'transform 1s';
         lightElement.style.transform = `rotateX(${tilt}deg) rotateZ(${pan}deg)`;
         lightElement.style.filter = `brightness(${dimmer / 255})`;
-        lightElement.style.backgroundColor = color;
+
+        // color から最後の ) を削除
+        const _color = color.slice(0, -1);
+        const bgcolor = [
+            'radial-gradient( circle',
+            `${_color}, 1) 0%`,
+            `${_color}, 0.8) 40%`,
+            `${_color}, 0.6) 60%`,
+            `${_color}, 0.4) 70%`,
+            `${_color}, 0.2) 80%`,
+            `${_color}, 0.1) 90% )`
+            //'transparent 60% )'
+        ].join(', ');
+
+        lightElement.style.background = bgcolor;
 
         textElement.textContent = text || '';
     }
@@ -46,7 +60,6 @@ function init() {
                 const activeCues = trackElement.track.activeCues;
                 if( activeCues && activeCues.length > 0 ) {
                     const currentCue = activeCues[0]; // obtain DataCue
-                    console.log(`DataCue for ${forValue}:`, currentCue.value, currentCue.type);
 
                     if( currentCue.type === 'org.webvmt.lighting-example' ) {
                         drawLight({ lightId: forValue, ...currentCue.value, text: JSON.stringify(currentCue.value, null, 2) });
