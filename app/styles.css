@@ -1,30 +1,55 @@
-#lighting {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    width: 640px;
-    height: 320px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-#lighting .wrapper {
-    position: relative;
-    width: 320px;
-    height: 320px;
-}
-
-
-#lighting .light {
+#video-section {
     position: absolute;
-    border: 1px solid #ccc;
-    border-radius: 320px;
-    top: 80px;
-    left: 0px;
-    width: 320px;
-    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
     z-index: 1000;
 }
 
-#lighting .text {
+#video-section h1 {
+    color: #fff;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lighting-section {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+}
+
+#lighting-section .wrapper {
+    position: relative;
+    width: 50vw;
+    height: 80vh;
+}
+
+
+#lighting-section .light {
+    position: absolute;
+    border-radius: 45%;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#lighting-section .text {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -33,7 +58,8 @@
     z-index: 1001;
 }
 
-#lighting .text pre {
+#lighting-section .text pre {
     font-size: 1.2em;
     font-weight: bold;
+    color: cyan;
 }
